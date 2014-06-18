@@ -142,7 +142,7 @@ function T = image_transpose(I)
 
     [h, w, num_channels] = size(I);
     
-    T = zeros([w h num_channels], 'like', I);
+    T = zeros([w h num_channels]);
     
     for c = 1:num_channels
         T(:,:,c) = I(:,:,c)';
