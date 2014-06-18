@@ -31,12 +31,7 @@ function [brightness, key] = prepareTMO()
     fprintf('Prepared %d\n', currentFrame);
   end
   
-  if(config.LeonhardtTMO.ProcessChannels == false)
-    key = repmat(mean(key, 2), [1 3]);
-    brightness = repmat(mean(brightness, 2), [1 3]);
-  else
-    key = fliplr(key);
-    brightness = fliplr(brightness);
-  end
+  key = fliplr(key);
+  brightness = fliplr(brightness);
 
 end
